@@ -16,5 +16,11 @@ public class MainActivity extends AppCompatActivity {
         MyObservableObject myObservableObject = new MyObservableObject();
         myObservableObject.setField("my observable object");
         binding.setMyData(myObservableObject);
+
+        MyObjectWithObservableFields anotherObject = new MyObjectWithObservableFields();
+        anotherObject.field.set("another object");
+        binding.setAnotherObject(anotherObject);
+
+        binding.editText.setText("this doesn't work any more");
     }
 }
